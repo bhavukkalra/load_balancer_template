@@ -16,7 +16,7 @@ io.on('connection', (socket) => {
     io.emit('usercnt', count);
 
     // 'disconnect' event will run if client 
-    // browser closes (Tab)
+    // browser closes (Tab);
     socket.on("disconnect", () => {
         console.log("a user disconnected");
         count--;
