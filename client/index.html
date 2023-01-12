@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>This is one instance</title>
 </head>
+<script src="https://cdn.socket.io/4.5.4/socket.io.min.js" integrity="sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI" crossorigin="anonymous"></script>
+<script>
+    var socket = io();
+    console.log("This is using the client javascript engine");
+
+    socket.on('usercnt', (msg) => {
+        document.getElementById("count").innerHTML = msg;
+    });
+
+
+</script>
 <body>
 
 
-    Hey this is HTML!
+    Hey this is HTML! <br>
+    <span id="count">0</span> user online
     
 </body>
 </html>
