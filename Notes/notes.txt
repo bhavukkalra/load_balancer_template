@@ -1,1 +1,10 @@
 Start of the Project
+
+
+1) Force them to authenticate, then count the number of unique sessions. You won't know for sure anyway if the user is staring at the browser window/tab or not. But if one user has 10 tabs open to your app, then using an authentication scheme will produce the correct count.
+
+However, most auth these days is stateless, so the better way to do this would be to count the number of open websocket connections and then aggregate by IP address or something like that.
+
+Ajax will definitely be needed?
+
+Implementation using socket IO 
